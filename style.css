@@ -1,0 +1,76 @@
+.code-part {
+  text-align: left;
+  vertical-align: top;
+  width: 700px;
+}
+
+.no-code-part {
+  width: 700px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: #874100;
+}
+body {
+  /* background: url("background-image-sky.jpg"); */
+  background-color:  #26734d;
+  background-size: cover;
+  color: white;
+
+}
+
+table {
+  color: white;
+}
+
+a {
+  color: lightblue;
+  text-underline-position: below;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: bold;
+}
+
+[border="5"] {
+  color: darkorange;
+}
+
+h1 {
+  color: white;
+}
+
+#defaultid {
+  color: white;
+}
+
+.list-of-things > li {
+  color: red
+}
+
+.doubleCell {
+    color: yellow;
+}
+
+.creators-cell {
+  font-weight: bold;
+  color: blue;
+}
+
+.list-table {
+  font-style: oblique;
+  color: lightblue;
+}
+
+th[colspan="3"] {
+  color: white
+}
+
+.fem {
+  color: pink;
+}
+.women-table .fem {
+  color:white;
+}
