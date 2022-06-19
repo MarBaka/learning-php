@@ -186,64 +186,10 @@
   }
   echo "Array after sorting: ";
   print_r($sorting_array);
+
+
+
   echo "<br>";
-
-
-
-
-
-
-  // $correct_solves = 0;
-  //
-  // foreach ($sorting_array as $key => $value) {
-  //
-  //   if ($correct_solves == 0) {
-  //     echo "<br> Hi!, this is the first loop! <br> ";
-  //     $correct_solves ++;
-  //     continue;
-  //   }
-  //
-  //   $element_key = 0; // key used for value after sorting
-  //
-  //   //s_ stands for sorted_
-  //   foreach (array_slice($sorting_array, 0, $correct_solves) as $s_key => $s_value) {
-  //
-  //     if ($value == null){
-  //       echo"wtf";
-  //     } else {
-  //       echo "the value is equal to " . $value;
-  //     }
-  //
-  //     if ($value > $s_value or $element_key == 0) {
-  //       $element_key++;
-  //     } elseif ($value <= $s_value) {
-  //       $data_holder1 = array_slice($sorting_array, $s_key);
-  //       unset($data_holder, $value);
-  //       unset($sorting_array, $data_holder);
-  //       $sorting_array[] = $value;
-  //       $sorting_array += $data_holder1;
-  //       break;
-  //     }
-  //
-  //     echo "<br> next iteration after comleting the first half of nested foreach is: ";
-  //     print_r($sorting_array);
-  //
-  //     if ($value > $sorting_array[$element_key-1] && $value <= $sorting_array[$element_key]) {
-  //       $data_holder = array_slice($sorting_array, $element_key);
-  //       $sorting_array = array_slice($sorting_array, 0, $element_key-1);
-  //
-  //       $sorting_array[] = $value;
-  //       $sorting_array += $data_holder;
-  //       $correct_solves++;
-  //       break;
-  //     }
-  //
-  //   }
-  // }
-
-  echo"<br>";
-  print_r($sorting_array);
-
   echo "<br>";
   echo "<br>";
   echo "<br>";
