@@ -1,13 +1,11 @@
-.code-part {
-  text-align: left;
-  vertical-align: top;
-  width: 700px;
-}
 
-.no-code-part {
-  width: 700px;
+header {
+  background-color: #e3e3e3;
+  color: black;
+  padding: 2em;
+  text-align: center;
+  font-size: 22px;
 }
-
 h1 {
   font-size: 30px;
   font-weight: bold;
