@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="keywords" content="мой сайт, тестирование веба">
@@ -41,8 +41,7 @@
   <?php
 
   //this is a constant and it is used after the rand() section
-  define("THREE_NAMES", ["Marat", "Bayel", "Iskender"]);
-  define("FIVE_NUMS", [1, 2, 3, 4, 5]);
+  const THREE_NAMES = ["Marat", "Bayel", "Iskender"];
 
   $phrase_mike = "Mike is a capitan of KR Teyvat guild which is located in Genshin Impact fictional world";
   echo $phrase_mike;
@@ -70,7 +69,7 @@
   echo "btw, the length of the original phrase is: ".strlen($phrase_mike)." stay nice and positive UwU<br>";
 
   echo "<br>";
-  $a = var_dump($phrase_mike);
+  $a = gettype($phrase_mike);
   echo $a."<br>";
 
   //checking the is_numeric function
@@ -124,7 +123,7 @@
 
   if ($three_int === $three_float) {
     echo "the === says they're identical";
-  } elseif ($three_int !== $three_float) {
+  } elseif ($three_int != $three_float) {
     echo "the !== says they're not identical";
   }
   echo "<br>";
@@ -162,35 +161,68 @@
   }
   echo "end of for loop <br>";
 
+  // an initially-supposed-to-be-little exercise to sort an array
+  $sorting_array = [1, 2, -1, -2, 3,412, -256,2.23, -32,0];
+  echo "<br> Array before sorting: ";
+  print_r($sorting_array);
+  echo "<br>";
+
+  for ($iteration=0; $iteration < count($sorting_array); $iteration++) {
+    for ($i=0; $i < count($sorting_array); $i++) {
+      if ($i < count($sorting_array)-1) {
+        if ($sorting_array[$i] > $sorting_array[$i+1]) {
+          $data_holder = $sorting_array[$i+1];
+          $sorting_array[$i+1] = $sorting_array[$i];
+          $sorting_array[$i] = $data_holder;
+
+          print_r ($sorting_array);
+          echo "<br>";
+        }
+      }
+    }
+  }
 
 
+  //fun with functions
   function swapvalue ($key_a, $a, $key_b, $b){
     return [$key_a => $b, $key_b => $a];
   }
 
-
-  // an initially-supposed-to-be-little exercise to sort an array
-  $sorting_array = [1, 2, -1, -2, 3, -3];
-  echo "<br> Array before sorting: ";
-  print_r($sorting_array);
-  echo "<br>";
-  foreach ($sorting_array as $key => $value) {
-    foreach ($sorting_array as $k => $v) {
-      if ($v > $sorting_array[$k+1]) {
-        $data_holder = swapvalue($k, $v, $k+1, $sorting_array[$k+1]);
-        unset($sorting_array[$k]);
-        unset($sorting_array[$k+1]);
-        array_push($sorting_array, $data_holder);
-      }
-    }
+  function magictrick (&$a) {
+    $a = "jij";
   }
-  echo "Array after sorting: ";
-  print_r($sorting_array);
 
-
+  $result_of_many_calcs = 12.3;
+  magictrick($result_of_many_calcs);
+  echo $result_of_many_calcs;
+  //fun is over
 
   echo "<br>";
+
+  $md_arr = array(["Marat", "#dbdad3", "JoJo"], ["Bayel", "black", "Naruto"], ["Isken", "#dbdad3", "One piece"]);
+  for ($i=0; $i < count($md_arr); $i++) {
+    echo "<p style=color:".strval($md_arr[$i][1]).">Name: ".strval($md_arr[$i][0]).", favorite anime: ".strval($md_arr[$i][2])."</p><br>";
+  }
+
+  //an exercise from my friend
+
+  $list_of_names = "Enter name #1: Jason; Enter name #2: Mark; Enter name #3: Alex; Enter name #4: Chris; Enter name #5: John";
+  $lines = explode(";", $list_of_names);
+  $names = [];
+  for ($i=0; $i < count($lines); $i++) {
+    $names[] = explode(":", $lines[$i])[1];
+  }
+  asort($names);
+  $names = array_values($names);
+  print_r ($names);
   echo "<br>";
+  echo "Input: $list_of_names <br>";
+  for ($i=0; $i < count($names); $i++) {
+    echo "name #" . strval($i+1) . ": " . $names[$i] . "<br>";
+  }
+
+
+
   echo "<br>";
   echo "<br>";
   echo "<br>";
