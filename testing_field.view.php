@@ -17,7 +17,8 @@
     Contacts: GitHub - <a href="https://github.com/MarBaka" target="_blank">@Marbaka</a>, e-mail - marat31bv@gmail.com
     <br>
     <div class="caption">
-        The testing field is <?= $is_site_done ? 'finished and all works are stopped' : 'still being used and updated';?>
+        The testing field is <?= $site_info['is done'] ? 'finished and all works are stopped' : 'still being used and updated';?>;
+        Last big update: <?= $site_info['last big upd'];?>
     </div>
 
 </header>
@@ -43,7 +44,13 @@
 </ul>
 <br>
 <br>
-<br>
+<ul>
+    <?php if (check_user($test_user)==true) : ?>
+        <li><strong><?= $test_user['name'] . '</strong> is approved to be on this site';?></li>
+    <?php else : ?>
+        <li><strong><?= $test_user['name'] . '</strong> is not approved to be on this site';?></li>
+    <?php endif?>
+</ul>
 <br>
 </body>
 </html>
