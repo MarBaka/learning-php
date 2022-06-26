@@ -13,6 +13,10 @@ header {
     font-size: 30px;
 }
 
+s {
+    text-line-through-color: red;
+}
+
 .caption {
     font-style: italic;
     font-size: 20px;

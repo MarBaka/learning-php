@@ -18,6 +18,12 @@ function fetchAllTasks ($pdo) {
     return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 }
 
+function fetchSiteInfo ($pdo) {
+    $statement = $pdo->prepare('select * from site_info where dev_name=:devname');
+    $statement->execute([':devname' => 'Marat']);
+
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
 
 function my_sort($arr) {
     for ($iteration = 0; $iteration < count($arr); $iteration++) {
@@ -38,10 +44,9 @@ function check_user ($user) {
     if ($user['age'] >= 18) {
         return true;
     } elseif (gettype($user) != 'array' || $user['age'] == null) {
-        echo 'wrong data input for check_user';
-        return false;
+        die( 'wrong data input for check_user');
     } else {
-        die('Error with check_user');
+        return false;
     }
 }
 

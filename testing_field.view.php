@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -17,8 +16,8 @@
     Contacts: GitHub - <a href="https://github.com/MarBaka" target="_blank">@Marbaka</a>, e-mail - marat31bv@gmail.com
     <br>
     <div class="caption">
-        The testing field is <?= $site_info['is done'] ? 'finished and all works are stopped' : 'still being used and updated';?>;
-        Last big update: <?= $site_info['last big upd'];?>
+        The testing field is <?= $site_info['is_finished'] ? 'finished and all works are stopped' : 'still being used and updated';?>;
+        Last big update: <?= $site_info['last_big_upd'];?>
     </div>
 
 </header>
