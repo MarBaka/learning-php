@@ -2,7 +2,7 @@
 body {
     color:white;
     background-color: #6e7c8f;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 header {
@@ -26,6 +26,5 @@ a {
 a:hover {
     color:#c452b7;
     text-decoration: underline;
-    text-decoration-line: wavy;
 }
 

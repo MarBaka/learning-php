@@ -2,6 +2,8 @@
 // path for after localhost is /www/testing_field.php?name=Marat
 
 require 'testing_field.functions.php';
+require 'Task.php';
+
 
 $site_info = [
     'Dev name' => 'Marat',
@@ -29,5 +31,11 @@ $test_user = [
     'age' => 17,
     'pref_highlight' => 'red'
 ];
+
+
+$pdo = connectToDB();
+
+$tasks = fetchAllTasks($pdo);
+
 
 require 'testing_field.view.php';

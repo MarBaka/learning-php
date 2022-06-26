@@ -30,6 +30,7 @@
     print_r(my_sort($sorting_array));
     echo "<br>";
 ?>
+<hr>
 <br>
 <br>
 <br>
@@ -42,8 +43,10 @@
         <strong><li><?= $name; ?></li></strong>
     <?php endforeach; ?>
 </ul>
+<hr>
+
 <br>
-<br>
+
 <ul>
     <?php if (check_user($test_user)==true) : ?>
         <li><strong><?= $test_user['name'] . '</strong> is approved to be on this site';?></li>
@@ -51,6 +54,13 @@
         <li><strong><?= $test_user['name'] . '</strong> is not approved to be on this site';?></li>
     <?php endif?>
 </ul>
+<hr>
 <br>
+<ul>
+    <?php foreach ($tasks as $task) : ?>
+    <li> <?= "<strong>$task->description</strong><em>" ?> <?=  $task->completed ? ': <s>done</s></em>': ': unfinished</em>' ?></li>
+    <?php endforeach;?>
+</ul>
+
 </body>
 </html>

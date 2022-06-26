@@ -1,5 +1,24 @@
 <?php
 
+
+function connectToDB (){
+    try {
+        return new PDO('mysql:host=127.0.0.1;dbname=testing_field', 'root', 'absTraction-944');
+    } catch (PDOException $e) {
+        die($e->getMessage());
+    }
+}
+
+
+function fetchAllTasks ($pdo) {
+    $statement = $pdo->prepare('select * from todos');
+
+    $statement->execute();
+
+    return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+}
+
+
 function my_sort($arr) {
     for ($iteration = 0; $iteration < count($arr); $iteration++) {
         for ($i = 0; $i < count($arr); $i++) {
@@ -22,4 +41,10 @@ function check_user ($user) {
         echo 'wrong data input for check_user';
         return false;
     }
+}
+
+function dd($data) {
+    echo '<pre>';
+    die(var_dump($data));
+    echo '</pre>';
 }
