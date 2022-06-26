@@ -40,11 +40,12 @@ function check_user ($user) {
     } elseif (gettype($user) != 'array' || $user['age'] == null) {
         echo 'wrong data input for check_user';
         return false;
+    } else {
+        die('Error with check_user');
     }
 }
 
 function dd($data) {
     echo '<pre>';
     die(var_dump($data));
-    echo '</pre>';
 }
