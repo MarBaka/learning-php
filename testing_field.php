@@ -5,13 +5,16 @@ require 'testing_field.functions.php';
 require 'Task.php';
 require 'Site_info.php';
 
-$pdo = connectToDB();
 
+$query = require 'bootstrap.php';
+$tasks = $query->select('todos', 'Task');
 
-$site_info = fetchSiteInfo($pdo);
+$sinfo_args = ['where dev_name = ', 'dev_name', 'Marat'];
+$site_info = $query->select("site_info", "Site_info", $sinfo_args[0], $sinfo_args[1], $sinfo_args[2]);
+unset ($site_info_args);
 
 $greeting = "Hello! <br>
-        My name is " . $site_info['dev_name'] . ", and this is my <u>testing field</u> for different aspects of PHP, HTML and CSS<br>
+        My name is " . $site_info->dev_name . ", and this is my <u>testing field</u> for different aspects of PHP, HTML and CSS<br>
         The file will be updated often and some things could be deleted or moved around<br>
         <em>Might also include JS in the future, who knows?)</em>";
 
@@ -33,7 +36,6 @@ $test_user = [
 ];
 
 
-$tasks = fetchAllTasks($pdo);
 
 
 

@@ -1,15 +1,6 @@
 <?php
 
 
-function connectToDB (){
-    try {
-        return new PDO('mysql:host=127.0.0.1;dbname=testing_field', 'root', 'absTraction-944');
-    } catch (PDOException $e) {
-        die($e->getMessage());
-    }
-}
-
-
 function fetchAllTasks ($pdo) {
     $statement = $pdo->prepare('select * from todos');
 
