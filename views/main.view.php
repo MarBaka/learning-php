@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="мой сайт, тестирование веба">
     <title> testing field </title>
-    <link rel="stylesheet" href="testing_style.css">
+    <link rel="stylesheet" href="views/main.css">
 </head>
 
 <body>
@@ -21,6 +21,7 @@
     </div>
 
 </header>
+
 <?php
     $sorting_array = [1, 2, -1, -2, 3,412, -256,2.23, -32,0];
     echo "<br> Array before sorting: ";
