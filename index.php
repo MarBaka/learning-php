@@ -1,7 +1,7 @@
 <?php
 
-
-$query = require 'core/bootstrap.php';
+echo __DIR__.'/core/bootstrap.php';
+$query = require __DIR__.'/core/bootstrap.php';
 
 
 
@@ -9,7 +9,8 @@ require Router::load('routes.php')
     ->direct(Request::uri());
 
 
-//echo"huy";
+//echo"chlen";
+
 //require 'core/bootstrap.php';
 //require 'core/router.php';
 //

@@ -4,5 +4,5 @@
 $router->define([
     '' => 'controllers/main.php',
     'about' => 'controllers/about.php',
-    'example' => 'controllers/example.php'
+    'sorting' => 'controllers/sorting.php'
 ]);

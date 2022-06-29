@@ -1,9 +1,10 @@
-
 body {
     color:white;
     background-color: #6e7c8f;
     font-size: 25px;
 }
+
+
 
 header {
     background-color: #e3e3e3;
@@ -30,5 +31,15 @@ a {
 a:hover {
     color:#c452b7;
     text-decoration: underline;
+}
+
+
+nav a {
+    color: #8be8e1;
+    text-decoration: forestgreen;
+    text-decoration-line: initial;
+}
+nav a:hover {
+    color: darksalmon;
 }
 

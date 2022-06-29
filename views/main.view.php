@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="мой сайт, тестирование веба">
-    <title> testing field </title>
-    <link rel="stylesheet" href="views/main.css">
-</head>
-
-<body>
-
+<?php require 'partials/head.php';?>
 <header>
     <?= $greeting; ?>
     <br>
@@ -21,28 +11,6 @@
     </div>
 
 </header>
-
-<?php
-    $sorting_array = [1, 2, -1, -2, 3,412, -256,2.23, -32,0];
-    echo "<br> Array before sorting: ";
-    print_r($sorting_array);
-    echo "<br> Array after sorting: ";
-    print_r(my_sort($sorting_array));
-    echo "<br>";
-?>
-<hr>
-<br>
-<br>
-<?= "Input:" . $list_of_names; ?>
-<br>
-<ul>
-    <?php foreach($names as $name) : ?>
-        <strong><li><?= $name; ?></li></strong>
-    <?php endforeach; ?>
-</ul>
-<hr>
-
-<br>
 
 <ul>
     <?php if (check_user($test_user)==true) : ?>
@@ -59,5 +27,4 @@
     <?php endforeach;?>
 </ul>
 
-</body>
-</html>
+<?php require 'partials/foot.php';

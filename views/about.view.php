@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
+<?php require 'partials/head.php';?>
 
-<head>
-    <title>About me</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="views/main.css">
-</head>
+<header>About me</header>
 
-<body>
-    <header>About me</header>
-</body>
-</html>
+<?php require 'partials/foot.php';?>
